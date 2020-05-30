@@ -94,7 +94,11 @@ body {
       border-radius: 4px; }
     .main__container .preview-space {
       background: #eee;
-      height: 320px; }
+      height: 320px;
+      line-height: 320px;
+      font-size: 2.4rem;
+      text-align: center;
+      color: #888; }
     .main__container .load-button,
     .main__container .preview-image {
       display: none; }
