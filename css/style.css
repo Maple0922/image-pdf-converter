@@ -1,1 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400|Roboto:300,400&display=swap");
+* {
+  box-sizing: border-box; }
 
+html {
+  color: #111;
+  background: #fcfcfc;
+  font-size: 62.5%; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+ol, ul {
+  list-style: none; }
+
+th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+a, input, button, textarea, select, option {
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+  -webkit-appearance: none; }
+
+* {
+  font-family: 'Roboto', 'Noto Sans JP', sans-serif; }
+
+.header {
+  height: 60px;
+  width: 100%;
+  padding: 0 30px;
+  background: #fcfcfc;
+  box-shadow: 0 0 8px 0 #bbb;
+  position: fixed;
+  top: 0; }
+  .header__title {
+    font-size: 2rem;
+    line-height: 60px; }
+
+.main {
+  margin-top: 60px;
+  min-height: calc(100vh - 60px);
+  background: #eee;
+  padding: 20px;
+  font-size: 1.6rem; }
+  .main__container {
+    background: #fcfcfc;
+    padding: 24px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 8px 0 #bbb; }
+    .main__container input, .main__container label {
+      display: block;
+      color: #fcfcfc;
+      background: #070245;
+      font-size: 1.4rem;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      width: 100%;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      max-width: 300px;
+      cursor: pointer; }
+    .main__container .preview-image,
+    .main__container .preview-space {
+      margin-bottom: 16px;
+      width: 100%;
+      max-width: 300px;
+      border: 3px dashed #bbb;
+      border-radius: 4px; }
+    .main__container .preview-space {
+      background: #eee;
+      height: 320px; }
+    .main__container .load-button,
+    .main__container .preview-image {
+      display: none; }
+    .main__container .disabled {
+      pointer-events: none;
+      background: #b1b1b1; }

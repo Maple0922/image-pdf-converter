@@ -8,24 +8,60 @@
   padding: 0 30px;
   background: $white;
   box-shadow: $basic-shadow;
-  position: relative;
+  position: fixed;
+  top: 0;
   &__title {
-    font-size: 2.4rem;
+    font-size: 2rem;
     line-height: $height-header;
   }
 }
 
 .main {
+  margin-top: $height-header;
   min-height: $height-main;
   background: $super-light-gray;
-  padding: 30px;
+  padding: 20px;
   font-size: 1.6rem;
   &__container {
     background: $white;
-    padding: 16px 24px;
+    padding: 24px;
     margin-bottom: 20px;
     border-radius: 6px;
     box-shadow: $basic-shadow;
+    input,label {
+      display: block;
+      color: $white;
+      background: $color-button;
+      font-size: 1.4rem;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      width: 100%;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      max-width: 300px;
+      cursor: pointer;
+    }
+    .preview-image,
+    .preview-space {
+      margin-bottom: 16px;
+      width: 100%;
+      max-width: 300px;
+      border: 3px dashed $light-gray;
+      border-radius: 4px;
+    }
+    .preview-space {
+      background: $super-light-gray;
+      height: 320px;
+    }
+    .load-button,
+    .preview-image {
+      display: none;
+    }
+    .disabled {
+      pointer-events: none;
+      background: $color-button-disabled;
+    }
   }
 }
 

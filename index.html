@@ -3,24 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>newsite</title>
+  <title>Image PDF Converter</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="icon/favicon.svg">
   <link rel="apple-touch-icon" href="icon/favicon.svg">
+  <script type="text/javascript" src="pdfmake/build/pdfmake.min.js"></script>
+  <script type="text/javascript" src="pdfmake/build/vfs_fonts.js"></script>
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
   <header class="header">
-    <h1 class="header__title">title</h1>
+    <h1 class="header__title">写真をPDFに変えるやつ</h1>
   </header>
   <main class="main">
     <div class="main__container">
-      main
+      <section>
+
+      </section>
+      <img class="preview-image" src="">
+      <p class="preview-space">NO IMAGE</p>
+      <input class="load-button" type="file" id="image" name="image" accept="image/*" onchange="previewFile()">
+      <label for="image">画像を読み込む</label>
+      <input class="show-button disabled" value="別ウインドウでPDFを表示" onClick="pdfMake.createPdf(docDefinition).open();return false;">
+      <input class="download-button disabled" value="PDFをダウンロード" onClick="pdfMake.createPdf(docDefinition).download('optionalName.pdf');return false;">
     </div>
   </main>
-  <footer class="footer">
-
-  </footer>
 </body>
 </html>
