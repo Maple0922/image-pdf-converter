@@ -96,12 +96,18 @@ html,body {
 
 @include mq("sp") {
   .pc {
-    display: none;
+    display: none!important;
+  }
+  .sp {
+    display: block;
   }
 }
 
 @include mq("pc") {
   .sp {
-    display: none;
+    display: none!important;
+  }
+  .pc {
+    display: block;
   }
 }

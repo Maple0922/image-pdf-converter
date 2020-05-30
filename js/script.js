@@ -13,6 +13,7 @@ function previewFile() {
   const previewSpace = document.querySelector('.preview-space');
   const showButton = document.querySelector('.show-button');
   const downloadButton = document.querySelector('.download-button');
+  const spShowButton = document.querySelector('.sp-show-button');
 
   // reader.addEventListener("load", setUri, false);
 
@@ -40,11 +41,13 @@ function previewFile() {
     // reader.readAsDataURL(file);
     showButton.classList.remove('disabled');
     downloadButton.classList.remove('disabled');
+    spShowButton.classList.remove('disabled');
     previewImage.style.display = "block";
     previewSpace.style.display = "none";
   } else {
     showButton.classList.add('disabled');
     downloadButton.classList.add('disabled');
+    spShowButton.classList.add('disabled');
     previewImage.style.display = "none";
     previewSpace.style.display = "block";
   }
