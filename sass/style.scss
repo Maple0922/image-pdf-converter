@@ -79,7 +79,7 @@ body {
       display: none;
     }
     .disabled {
-      // pointer-events: none;
+      pointer-events: none;
       background: $color-button-disabled;
     }
   }
