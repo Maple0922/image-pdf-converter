@@ -60,7 +60,7 @@ function downloadPDF(){
       {
         image: dataURI,
         width: 595,
-        height: 841,
+        // height: 841,
         margin: [-40, -40, -40, -40]
       }
     ]
