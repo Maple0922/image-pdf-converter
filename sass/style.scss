@@ -85,6 +85,7 @@ html,body {
     }
     .waseda-button {
       background: $color-button-waseda;
+      margin-bottom: 0;
     }
     .disabled {
       pointer-events: none;
@@ -93,6 +94,14 @@ html,body {
   }
 }
 
-.footer {
+@include mq("sp") {
+  .pc {
+    display: none;
+  }
+}
 
+@include mq("pc") {
+  .sp {
+    display: none;
+  }
 }

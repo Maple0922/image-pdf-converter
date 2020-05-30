@@ -127,7 +127,16 @@ html, body {
     .main__container .preview-image {
       display: none; }
     .main__container .waseda-button {
-      background: #4d0d12; }
+      background: #4d0d12;
+      margin-bottom: 0; }
     .main__container .disabled {
       pointer-events: none;
       background: #b1b1b1; }
+
+@media screen and (max-width: 767px) {
+  .pc {
+    display: none; } }
+
+@media screen and (min-width: 768px) {
+  .sp {
+    display: none; } }
