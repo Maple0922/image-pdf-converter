@@ -10,8 +10,9 @@ $white: #fcfcfc;
 
 // variables
 $height-header: 60px;
-$height-main: calc(100vh - #{$height-header});
+$height-main: 100vh;
 $basic-shadow: 0 0 8px 0 $light-gray;
 
 $color-button: rgb(7, 2, 69);
+$color-button-waseda: rgb(77, 13, 18);
 $color-button-disabled: rgb(177, 177, 177);

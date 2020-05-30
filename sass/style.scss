@@ -2,7 +2,7 @@
 
 // styles
 
-body {
+html,body {
   background: $super-light-gray;
 }
 
@@ -21,9 +21,8 @@ body {
 }
 
 .main {
-  margin-top: $height-header;
   min-height: $height-main;
-  padding: 50px 20px 20px 20px;
+  padding: 82px 20px 20px 20px;
   font-size: 1.6rem;
   &__container {
     background: $white;
@@ -33,7 +32,8 @@ body {
     box-shadow: $basic-shadow;
     input,
     label,
-    button {
+    button,
+    a {
       display: block;
       color: $white;
       background: $color-button;
@@ -53,8 +53,13 @@ body {
         top: 50%;
         transform: translateY(-50%);
         right: 20px;
+        font-weight: bold;
         &.fa-image {
           font-size: 1.7rem;
+        }
+        &.fa-file-pdf {
+          font-size: 1.7rem;
+          right: 22px;
         }
       }
     }
@@ -77,6 +82,9 @@ body {
     .load-button,
     .preview-image {
       display: none;
+    }
+    .waseda-button {
+      background: $color-button-waseda;
     }
     .disabled {
       pointer-events: none;
