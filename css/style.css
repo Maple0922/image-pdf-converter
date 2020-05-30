@@ -64,7 +64,7 @@ body {
 .main {
   margin-top: 60px;
   min-height: calc(100vh - 60px);
-  padding: 20px;
+  padding: 50px 20px 20px 20px;
   font-size: 1.6rem; }
   .main__container {
     background: #fcfcfc;
