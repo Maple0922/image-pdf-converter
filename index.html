@@ -25,8 +25,8 @@
       <p class="preview-space">NO IMAGE</p>
       <input class="load-button" type="file" id="image" name="image" accept="image/*" onchange="previewFile()">
       <label for="image">画像を読み込む</label>
-      <input class="show-button disabled" value="別ウインドウでPDFを表示" onClick="pdfMake.createPdf(docDefinition).open();return false;">
-      <input class="download-button disabled" value="PDFをダウンロード" onClick="pdfMake.createPdf(docDefinition).download('optionalName.pdf');return false;">
+      <input class="show-button disabled" type="button" value="別ウインドウでPDFを表示" onClick="pdfMake.createPdf(docDefinition).open();return false;">
+      <input class="download-button disabled" type="button" value="PDFをダウンロード" onClick="pdfMake.createPdf(docDefinition).download('optionalName.pdf');return false;">
     </div>
   </main>
 </body>
