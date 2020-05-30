@@ -31,7 +31,9 @@ body {
     margin-bottom: 20px;
     border-radius: 6px;
     box-shadow: $basic-shadow;
-    input,label {
+    input,
+    label,
+    button {
       display: block;
       color: $white;
       background: $color-button;
@@ -44,6 +46,17 @@ body {
       line-height: 40px;
       max-width: 300px;
       cursor: pointer;
+      position: relative;
+      i {
+        position: absolute;
+        font-size: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+        &.fa-image {
+          font-size: 1.7rem;
+        }
+      }
     }
     .preview-image,
     .preview-space {
@@ -59,7 +72,7 @@ body {
       line-height: 320px;
       font-size: 2.4rem;
       text-align: center;
-      color: $gray;
+      color: darken($light-gray, 10%);
     }
     .load-button,
     .preview-image {

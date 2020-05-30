@@ -72,7 +72,9 @@ body {
     margin-bottom: 20px;
     border-radius: 6px;
     box-shadow: 0 0 8px 0 #bbb; }
-    .main__container input, .main__container label {
+    .main__container input,
+    .main__container label,
+    .main__container button {
       display: block;
       color: #fcfcfc;
       background: #070245;
@@ -84,7 +86,20 @@ body {
       text-align: center;
       line-height: 40px;
       max-width: 300px;
-      cursor: pointer; }
+      cursor: pointer;
+      position: relative; }
+      .main__container input i,
+      .main__container label i,
+      .main__container button i {
+        position: absolute;
+        font-size: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px; }
+        .main__container input i.fa-image,
+        .main__container label i.fa-image,
+        .main__container button i.fa-image {
+          font-size: 1.7rem; }
     .main__container .preview-image,
     .main__container .preview-space {
       margin-bottom: 16px;
@@ -98,7 +113,7 @@ body {
       line-height: 320px;
       font-size: 2.4rem;
       text-align: center;
-      color: #888; }
+      color: #a2a2a2; }
     .main__container .load-button,
     .main__container .preview-image {
       display: none; }

@@ -9,6 +9,7 @@
   <link rel="apple-touch-icon" href="icon/favicon.svg">
   <script type="text/javascript" src="js/pdfmake.min.js"></script>
   <script type="text/javascript" src="js/vfs_fonts.js"></script>
+  <script src="https://kit.fontawesome.com/6c1f53abcf.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
@@ -20,9 +21,9 @@
       <img class="preview-image" src="">
       <p class="preview-space">NO IMAGE</p>
       <input class="load-button" type="file" id="image" name="image" accept="image/*" onchange="previewFile()">
-      <label for="image">画像を読み込む</label>
-      <input class="show-button disabled" type="button" value="別ウインドウでPDFを表示" onClick="pdfMake.createPdf(docDefinition).open();return false;">
-      <input class="download-button disabled" type="button" value="PDFをダウンロード" onClick="pdfMake.createPdf(docDefinition).download('optionalName.pdf');return false;">
+      <label for="image">画像を読み込む<i class="far fa-image"></i></label>
+      <button class="show-button disabled" type="button" onClick="pdfMake.createPdf(docDefinition).open();return false;">別ウインドウでPDFを表示<i class="fas fa-external-link-alt"></i></button>
+      <button class="download-button disabled" type="button" onClick="pdfMake.createPdf(docDefinition).download('optionalName.pdf');return false;">PDFをダウンロード<i class="fas fa-download"></i></button>
     </div>
   </main>
 </body>
