@@ -46,6 +46,9 @@ a, input, button, textarea, select, option {
 * {
   font-family: 'Roboto', 'Noto Sans JP', sans-serif; }
 
+body {
+  background: #eee; }
+
 .header {
   height: 60px;
   width: 100%;
@@ -61,7 +64,6 @@ a, input, button, textarea, select, option {
 .main {
   margin-top: 60px;
   min-height: calc(100vh - 60px);
-  background: #eee;
   padding: 20px;
   font-size: 1.6rem; }
   .main__container {
