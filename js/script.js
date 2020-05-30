@@ -9,20 +9,35 @@ pdfMake.fonts = {
 
 function previewFile() {
   const file = document.querySelector('input[type=file]').files[0];
-  const reader = new FileReader();
   const previewImage = document.querySelector('.preview-image');
   const previewSpace = document.querySelector('.preview-space');
   const showButton = document.querySelector('.show-button');
   const downloadButton = document.querySelector('.download-button');
 
-  reader.addEventListener("load", setUri, false);
+  // reader.addEventListener("load", setUri, false);
 
-  function setUri(){
-    previewImage.src = reader.result;
-  }
+
+  loadImage.parseMetaData(file, (data) => {
+    var options = {
+      canvas: true
+    };
+    if (data.exif) {
+      options.orientation = data.exif.get('Orientation');
+    }
+    loadImage(file, (canvas) => {
+      var dataUri = canvas.toDataURL('image/jpeg');
+      // 画像を作成
+      previewImage.src = dataUri;
+    }, options);
+  });
+
+
+  // function setUri(){
+  //   previewImage.src = reader.result;
+  // }
 
   if (file) {
-    reader.readAsDataURL(file);
+    // reader.readAsDataURL(file);
     showButton.classList.remove('disabled');
     downloadButton.classList.remove('disabled');
     previewImage.style.display = "block";
