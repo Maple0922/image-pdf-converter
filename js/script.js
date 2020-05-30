@@ -25,7 +25,7 @@ function previewFile() {
       options.orientation = data.exif.get('Orientation');
     }
     loadImage(file, (canvas) => {
-      var dataUri = canvas.toDataURL('image/jpeg');
+      var dataUri = canvas.toDataURL('image/*');
       // 画像を作成
       previewImage.src = dataUri;
     }, options);
