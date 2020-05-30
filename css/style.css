@@ -118,5 +118,4 @@ body {
     .main__container .preview-image {
       display: none; }
     .main__container .disabled {
-      pointer-events: none;
       background: #b1b1b1; }

@@ -15,10 +15,11 @@ function previewFile() {
   const showButton = document.querySelector('.show-button');
   const downloadButton = document.querySelector('.download-button');
 
-  reader.addEventListener("load", function () {
-    // convert image file to base64 string
+  reader.addEventListener("load", setUri, false);
+
+  function setUri(){
     previewImage.src = reader.result;
-  }, false);
+  }
 
   if (file) {
     reader.readAsDataURL(file);
@@ -34,9 +35,35 @@ function previewFile() {
   }
 }
 
-var docDefinition = {
-  content: 'This is an sample PDF printed with pdfMake. 日本語のテスト',
-  defaultStyle: {
-    font: 'NotoSans'
-  }
-};
+
+function openPDF(){
+  const previewImage = document.querySelector('.preview-image');
+  dataURI = previewImage.src;
+  var docDefinition = {
+    content: [
+      {
+        image: dataURI,
+        width: 595,
+        height: 841,
+        margin: [-40, -40, -40, -40]
+      }
+    ]
+  };
+  pdfMake.createPdf(docDefinition).open();
+}
+
+function downloadPDF(){
+  const previewImage = document.querySelector('.preview-image');
+  dataURI = previewImage.src;
+  var docDefinition = {
+    content: [
+      {
+        image: dataURI,
+        width: 595,
+        height: 841,
+        margin: [-40, -40, -40, -40]
+      }
+    ]
+  };
+  pdfMake.createPdf(docDefinition).download('title.pdf');
+}

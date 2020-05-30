@@ -23,8 +23,8 @@
       <p class="preview-space">NO IMAGE</p>
       <input class="load-button" type="file" id="image" name="image" accept="image/*" onchange="previewFile()">
       <label for="image">画像を読み込む<i class="far fa-image"></i></label>
-      <button class="show-button disabled" type="button" onClick="pdfMake.createPdf(docDefinition).open();return false;">別ウインドウでPDFを表示<i class="fas fa-external-link-alt"></i></button>
-      <button class="download-button disabled" type="button" onClick="pdfMake.createPdf(docDefinition).download('optionalName.pdf');return false;">PDFをダウンロード<i class="fas fa-download"></i></button>
+      <button class="show-button disabled" type="button" onClick="openPDF();">別ウインドウでPDFを表示<i class="fas fa-external-link-alt"></i></button>
+      <button class="download-button disabled" type="button" onClick="downloadPDF();">PDFをダウンロード<i class="fas fa-download"></i></button>
     </div>
   </main>
 </body>
