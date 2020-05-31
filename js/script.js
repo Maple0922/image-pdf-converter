@@ -1,22 +1,36 @@
-pdfMake.fonts = {
-  NotoSans: {
-    normal: 'NotoSans.otf',
-    bold: 'NotoSans.otf',
-    italics: 'NotoSans.otf',
-    bolditalics: 'NotoSans.otf'
-  }
-}
-
-function previewFile() {
-  const file = document.querySelector('input[type=file]').files[0];
+function display(isExistFile,isExistFileName) {
   const previewImage = document.querySelector('.preview-image');
   const previewSpace = document.querySelector('.preview-space');
   const showButton = document.querySelector('.show-button');
   const downloadButton = document.querySelector('.download-button');
   const spShowButton = document.querySelector('.sp-show-button');
 
-  // reader.addEventListener("load", setUri, false);
+  if(isExistFile){
+    previewImage.style.display = "block";
+    previewSpace.style.display = "none";
+  }else{
+    previewImage.style.display = "none";
+    previewSpace.style.display = "block";
+    showButton.classList.add('disabled');
+    downloadButton.classList.add('disabled');
+    spShowButton.classList.add('disabled');
+  }
 
+  if (isExistFile && isExistFileName) {
+    showButton.classList.remove('disabled');
+    downloadButton.classList.remove('disabled');
+    spShowButton.classList.remove('disabled');
+  } else {
+    showButton.classList.add('disabled');
+    downloadButton.classList.add('disabled');
+    spShowButton.classList.add('disabled');
+  }
+}
+
+function previewFile() {
+  const file = document.querySelector('input[type=file]').files[0];
+  const fileName = document.querySelector('.file-name-input').value;
+  const previewImage = document.querySelector('.preview-image');
 
   loadImage.parseMetaData(file, (data) => {
     var options = {
@@ -27,30 +41,18 @@ function previewFile() {
     }
     loadImage(file, (canvas) => {
       var dataUri = canvas.toDataURL('image/*');
-      // 画像を作成
       previewImage.src = dataUri;
     }, options);
   });
 
+  display(file,fileName);
+}
 
-  // function setUri(){
-  //   previewImage.src = reader.result;
-  // }
+function checkFileName() {
+  const file = document.querySelector('input[type=file]').files[0];
+  const fileName = document.querySelector('.file-name-input').value;
 
-  if (file) {
-    // reader.readAsDataURL(file);
-    showButton.classList.remove('disabled');
-    downloadButton.classList.remove('disabled');
-    spShowButton.classList.remove('disabled');
-    previewImage.style.display = "block";
-    previewSpace.style.display = "none";
-  } else {
-    showButton.classList.add('disabled');
-    downloadButton.classList.add('disabled');
-    spShowButton.classList.add('disabled');
-    previewImage.style.display = "none";
-    previewSpace.style.display = "block";
-  }
+  display(file,fileName);
 }
 
 
@@ -72,6 +74,8 @@ function openPDF(){
 
 function downloadPDF(){
   const previewImage = document.querySelector('.preview-image');
+  const downloadFileName = document.querySelector('.file-name-input').value + '.pdf';
+  console.log(downloadFileName);
   dataURI = previewImage.src;
   var docDefinition = {
     content: [
@@ -83,5 +87,5 @@ function downloadPDF(){
       }
     ]
   };
-  pdfMake.createPdf(docDefinition).download('title.pdf');
+  pdfMake.createPdf(docDefinition).download(downloadFileName);
 }

@@ -72,13 +72,27 @@ html, body {
     margin-bottom: 20px;
     border-radius: 6px;
     box-shadow: 0 0 8px 0 #bbb; }
-    .main__container input,
-    .main__container label,
-    .main__container button,
-    .main__container a {
+    .main__container .preview-label {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      cursor: pointer; }
+      .main__container .preview-label .preview-image,
+      .main__container .preview-label .preview-space {
+        margin-bottom: 16px;
+        width: 100%;
+        border: 3px dashed #bbb;
+        border-radius: 4px; }
+      .main__container .preview-label .preview-space {
+        background: #eee;
+        height: 320px;
+        line-height: 320px;
+        font-size: 2.4rem;
+        text-align: center;
+        color: #a2a2a2; }
+    .main__container .button {
       display: block;
       color: #fcfcfc;
-      background: #070245;
       font-size: 1.4rem;
       border-radius: 4px;
       margin-bottom: 16px;
@@ -89,44 +103,42 @@ html, body {
       max-width: 300px;
       cursor: pointer;
       position: relative; }
-      .main__container input i,
-      .main__container label i,
-      .main__container button i,
-      .main__container a i {
+      .main__container .button i {
         position: absolute;
         font-size: 1.5rem;
         top: 50%;
         transform: translateY(-50%);
         right: 20px;
         font-weight: bold; }
-        .main__container input i.fa-image,
-        .main__container label i.fa-image,
-        .main__container button i.fa-image,
-        .main__container a i.fa-image {
+        .main__container .button i.fa-image {
           font-size: 1.7rem; }
-        .main__container input i.fa-file-pdf,
-        .main__container label i.fa-file-pdf,
-        .main__container button i.fa-file-pdf,
-        .main__container a i.fa-file-pdf {
+        .main__container .button i.fa-file-pdf {
           font-size: 1.7rem;
           right: 22px; }
-    .main__container .preview-image,
-    .main__container .preview-space {
-      margin-bottom: 16px;
-      width: 100%;
-      max-width: 300px;
-      border: 3px dashed #bbb;
-      border-radius: 4px; }
-    .main__container .preview-space {
-      background: #eee;
-      height: 320px;
-      line-height: 320px;
-      font-size: 2.4rem;
-      text-align: center;
-      color: #a2a2a2; }
     .main__container .load-button,
     .main__container .preview-image {
       display: none; }
+    .main__container .load-label,
+    .main__container .show-button,
+    .main__container .download-button,
+    .main__container .sp-show-button {
+      background: #070245; }
+    .main__container .file-name {
+      border: 2px solid #bbb;
+      display: inline-block;
+      display: flex;
+      justify-content: space-between; }
+      .main__container .file-name .file-name-input {
+        color: #111;
+        text-align: right;
+        width: 77%;
+        max-width: 231px; }
+      .main__container .file-name .extension {
+        color: #111;
+        text-align: left;
+        width: 23%;
+        max-width: 69px;
+        display: inline-block; }
     .main__container .waseda-button {
       background: #4d0d12;
       margin-bottom: 0; }

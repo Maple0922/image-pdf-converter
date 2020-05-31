@@ -31,13 +31,30 @@ html,body {
     margin-bottom: 20px;
     border-radius: 6px;
     box-shadow: $basic-shadow;
-    input,
-    label,
-    button,
-    a {
+    .preview-label {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      cursor: pointer;
+      .preview-image,
+      .preview-space {
+        margin-bottom: 16px;
+        width: 100%;
+        border: 3px dashed $light-gray;
+        border-radius: 4px;
+      }
+      .preview-space {
+        background: $super-light-gray;
+        height: 320px;
+        line-height: 320px;
+        font-size: 2.4rem;
+        text-align: center;
+        color: darken($light-gray, 10%);
+      }
+    }
+    .button {
       display: block;
       color: $white;
-      background: $color-button;
       font-size: 1.4rem;
       border-radius: 4px;
       margin-bottom: 16px;
@@ -64,25 +81,35 @@ html,body {
         }
       }
     }
-    .preview-image,
-    .preview-space {
-      margin-bottom: 16px;
-      width: 100%;
-      max-width: 300px;
-      border: 3px dashed $light-gray;
-      border-radius: 4px;
-    }
-    .preview-space {
-      background: $super-light-gray;
-      height: 320px;
-      line-height: 320px;
-      font-size: 2.4rem;
-      text-align: center;
-      color: darken($light-gray, 10%);
-    }
+
     .load-button,
     .preview-image {
       display: none;
+    }
+    .load-label,
+    .show-button,
+    .download-button,
+    .sp-show-button {
+      background: $color-button;
+    }
+    .file-name {
+      border: 2px solid $light-gray;
+      display: inline-block;
+      display: flex;
+      justify-content: space-between;
+      .file-name-input {
+        color: $black;
+        text-align: right;
+        width: 77%;
+        max-width: 231px;
+      }
+      .extension {
+        color: $black;
+        text-align: left;
+        width: 23%;
+        max-width: 69px;
+        display: inline-block;
+      }
     }
     .waseda-button {
       background: $color-button-waseda;
