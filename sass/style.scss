@@ -36,21 +36,21 @@ html,body {
       width: 100%;
       max-width: 300px;
       cursor: pointer;
-      .preview-image,
-      .preview-space {
-        margin-bottom: 16px;
-        width: 100%;
-        border: 3px dashed $light-gray;
-        border-radius: 4px;
-      }
-      .preview-space {
-        background: $super-light-gray;
-        height: 320px;
-        line-height: 320px;
-        font-size: 2.4rem;
-        text-align: center;
-        color: darken($light-gray, 10%);
-      }
+    }
+    .preview-image,
+    .preview-space {
+      margin-bottom: 16px;
+      width: 100%;
+      border: 3px dashed $light-gray;
+      border-radius: 4px;
+    }
+    .preview-space {
+      background: $super-light-gray;
+      height: 320px;
+      line-height: 320px;
+      font-size: 2.4rem;
+      text-align: center;
+      color: darken($light-gray, 10%);
     }
     .button {
       display: block;
