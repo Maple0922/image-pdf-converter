@@ -27,8 +27,8 @@ function display(isExistFile,isExistFileName) {
   }
 
   let windowWidth = document.documentElement.clientWidth;
+  console.log(windowWidth);
   if (windowWidth < 767 && isExistFile){
-    console.log(windowWidth);
     spShowButton.classList.remove('disabled');
   }
 }
@@ -81,7 +81,6 @@ function openPDF(){
 function downloadPDF(){
   const previewImage = document.querySelector('.preview-image');
   const downloadFileName = document.querySelector('.file-name-input').value + '.pdf';
-  console.log(downloadFileName);
   dataURI = previewImage.src;
   var docDefinition = {
     content: [
