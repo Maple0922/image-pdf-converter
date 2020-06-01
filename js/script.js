@@ -25,6 +25,12 @@ function display(isExistFile,isExistFileName) {
     downloadButton.classList.add('disabled');
     spShowButton.classList.add('disabled');
   }
+
+  let windowWidth = document.documentElement.clientWidth;
+  if (windowWidth < 767 && isExistFile){
+    console.log(windowWidth);
+    spShowButton.classList.remove('disabled');
+  }
 }
 
 function previewFile() {
